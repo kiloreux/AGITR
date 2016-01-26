@@ -1,0 +1,7 @@
+<launch>
+    <node
+        pkg="agitr"
+        type="hello_node"
+        name="Hello_ROS">
+    </node>
+</launch>
