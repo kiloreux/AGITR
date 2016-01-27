@@ -1,0 +1,9 @@
+<launch>
+    <node
+        pkg="agitr"
+        type="log_node"
+        name="logging"
+        output="screen"
+    >
+    </node>
+</launch>
