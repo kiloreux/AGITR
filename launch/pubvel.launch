@@ -6,6 +6,7 @@
         type="turtlesim_node"
         respawn="true"
     >
+        <param name="max_vel" value="3" />
     </node>
 
     <node
