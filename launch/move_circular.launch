@@ -1,0 +1,14 @@
+<launch>
+    <node
+        pkg="turtlesim"
+        type="turtlesim_node"
+        name="turtlesim"
+    >
+    </node>
+    <node
+        pkg="agitr"
+        type="move_circular_node"
+        name="circular_move"
+    >
+    </node>
+</launch>
