@@ -1,0 +1,28 @@
+<launch>
+    <node
+        pkg="turtlesim"
+        type="turtlesim_node"
+        name="turtlesim"
+    >
+        <remap
+            from="turtle1/cmd_vel"
+            to="turtle1/cmd_vel_reversed"
+        >
+        </remap>
+    </node>
+
+    <node
+        pkg="turtlesim"
+        type="turtle_teleop_key"
+        name="keyboard"
+        launch-prefix="xterm -e"
+    >
+    </node>
+
+    <node
+        pkg="agitr"
+        type="reverse_node"
+        name="reversing_commands"
+    >
+    </node>
+</launch>

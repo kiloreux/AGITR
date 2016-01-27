@@ -126,11 +126,15 @@ add_executable(pub_vel_node src/PubVel.cpp)
 add_executable(subscriber_node src/Subscriber.cpp)
 add_executable(move_circular_node src/Move_Circular.cpp)
 add_executable(log_node src/log.cpp)
+add_executable(reverse_node src/reverse_pub.cpp)
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 # add_dependencies(agitr_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
+target_link_libraries(reverse_node
+    ${catkin_LIBRARIES}
+)
 target_link_libraries(log_node
     ${catkin_LIBRARIES}
 
