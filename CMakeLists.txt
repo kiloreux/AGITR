@@ -128,11 +128,15 @@ add_executable(move_circular_node src/Move_Circular.cpp)
 add_executable(log_node src/log.cpp)
 add_executable(reverse_node src/reverse_pub.cpp)
 add_executable(spawn_node src/turtle_spawn.cpp)
+add_executable(back_forward_node src/advance_forward_back.cpp)
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 # add_dependencies(agitr_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
+target_link_libraries(back_forward_node
+    ${catkin_LIBRARIES}
+)
 target_link_libraries(spawn_node
     ${catkin_LIBRARIES}
 )
