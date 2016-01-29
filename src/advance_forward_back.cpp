@@ -28,5 +28,22 @@ int main(int argc, char *argv[]) {
   msg.angular.z = 0;
   pub.publish(msg);
 
+  time(&time_now);
+  time(&time_later);
+
+  while ( difftime(time_later, time_now) < move_seconds && ros::ok() ) {
+    msg.linear.x = -1;
+    pub.publish(msg);
+    ROS_INFO_STREAM("The difference is "<< difftime(time_later, time_now));
+    time(&time_later);
+    rate.sleep();
+  }
+
+  msg.linear.x = 0;
+  msg.angular.z = 0;
+  pub.publish(msg);
+
+
+
   return 0;
 }
